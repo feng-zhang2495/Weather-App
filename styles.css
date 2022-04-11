@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Comfortaa:wght@300&family=Kanit&display=swap');
 
 body {
     background-color: #348ccc;
@@ -46,4 +46,30 @@ input[type="text"]
 #search_btn {
     width: 10%;
 
+}
+
+#date {
+    font-size: 175%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.rb {
+    border: solid;
+    border-radius: 15px;
+    padding: 0.75% 2.5%;
+    margin-right: 40%;
+    margin-top: 2%;
+    font-family: 'Comfortaa', cursive;
+    background-color: #48687f;
+    font-size: 150%
+}
+
+.lb {
+    padding: 1%;
+    margin-left: 10%;
+    margin-top: 2%;
 }

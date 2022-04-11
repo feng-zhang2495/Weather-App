@@ -1,7 +1,15 @@
 var btn1 = document.getElementById('search_btn');
 var textField = document.getElementById('textBox');
 var inputLocation = ''
+var date = document.getElementById('date')
 
+// Date
+dateArr = new Date().toString().split(" ");
+console.log(dateArr);
+date.innerHTML = `${dateArr[0]}, ${dateArr[1]} ${dateArr[2]}, ${dateArr[3]} - ${dateArr[4].slice(0,5)} <br />`; // ${dateArr[6]} ${dateArr[7]} ${dateArr[8]}
+
+
+// Submit Button
 btn1.addEventListener("click", function(e) {
     if (textField.value != "") {
         e.preventDefault();
@@ -35,6 +43,7 @@ const callAPI = (location) => {
         .catch(err => console.error(err));
 }
 
+// wind speed is in kmph
 
 
 
