@@ -7,6 +7,7 @@ body {
     color: white;
 }
 
+/* NAVBAR */
 input[type="text"]
 {
     font-size:150%;
@@ -25,51 +26,73 @@ input[type="text"]
 }
 
 .left {
-    margin-right: 40%;
+    margin-right: 35%;
     margin-left: 5%;
     white-space: nowrap;
 }
 
-.right {
-    font-size: 70%;
-}
-
 .middle {
-    white-space: nowrap;
-    margin-right: 1%;
+    font-size: 70%;
+    margin-right: 2%;
 }
 
-.rr {
-    padding: 1%
+#textBox {
+    padding: 0% 4%;
+}
+
+
+.right {
+    margin: 1%;
+    background-color: #348ccc;
+    padding: 0.4% 1%;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 #search_btn {
-    width: 10%;
-
+    margin: 1%;
+    padding: 1%;
 }
 
+/* MAIN CONTENT */
 #date {
-    font-size: 175%;
+    font-size: 100%;
+}
+
+.weather{
+    font-size: 200%;
+}
+
+#country {
+    font-size: 125%;
 }
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    background-image: url('/assets/mountain.jpg');
+    background-size: 100% 100%;
 }
 
 .rb {
     border: solid;
+    font-family: 'Comfortaa', cursive;
+}
+
+/* .rb {
+    border: solid;
     border-radius: 15px;
     padding: 0.75% 2.5%;
-    margin-right: 40%;
+    margin-right: 20%;
+    margin-left: 10%;
     margin-top: 2%;
     font-family: 'Comfortaa', cursive;
     background-color: #48687f;
     font-size: 150%
-}
+} */
 
-.lb {
-    padding: 1%;
-    margin-left: 10%;
+/* .lb {
     margin-top: 2%;
-}
+    border: 2px solid white;
+    display: flex;
+} */

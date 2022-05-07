@@ -6,7 +6,7 @@ var date = document.getElementById('date')
 // Date
 dateArr = new Date().toString().split(" ");
 console.log(dateArr);
-date.innerHTML = `${dateArr[0]}, ${dateArr[1]} ${dateArr[2]}, ${dateArr[3]} - ${dateArr[4].slice(0,5)} <br />`; // ${dateArr[6]} ${dateArr[7]} ${dateArr[8]}
+date.innerHTML = `${dateArr[0]}, ${dateArr[1]} ${dateArr[2]} - ${dateArr[4].slice(0,5)} <br />`; // ${dateArr[6]} ${dateArr[7]} ${dateArr[8]}
 
 
 // Submit Button
@@ -14,10 +14,15 @@ btn1.addEventListener("click", function(e) {
     if (textField.value != "") {
         e.preventDefault();
 
+        window.alert("This event listener is working");
+
         inputLocation = textField.value;
         console.log(inputLocation);
         // callAPI(inputLocation);
-        
+    }
+
+    else {
+        window.alert("You need to input a city name!");
     }
     
 })
@@ -37,6 +42,10 @@ const callAPI = (location) => {
     fetch(`https://yahoo-weather5.p.rapidapi.com/weather?location=${location}&format=json&u=c`, options)
         .then(response => response.json())
         .then(response => {
+            console.log(response);
+            var currentWeather = response.data.current_observation;
+            var currentTemp = currentWeather.condition.temperature;
+
             var { city, region, woeid, country, lat, long, timezone_id } = response.location;
             var forecasts = response.forecasts;
         })
@@ -45,7 +54,7 @@ const callAPI = (location) => {
 
 // wind speed is in kmph
 
-
+// response.data.current_observation
 
 // response.data
 // {
